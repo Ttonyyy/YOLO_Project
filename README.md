@@ -17,6 +17,6 @@ I chose this project because YOLO is something that I enjoyed working with in my
 # Flowchart
 
 # References
-[1] Ali Hassan, “YOLOv11 Face Emotion Detection,” 2025, GitHub repository. [Online]. Available: https://github.com/alihassanml/Yolo11-Face-Emotion-Detection
-[2] Aklima Akter Rimi, “9 Facial Expressions for YOLO,” 2025, Kaggle dataset. [Online]. Available: kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo/data?select=9+Facial+Expressions+you+need
-[3] U. Aymon, N. S. Kamarudin and A. F. A. Nasir, "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study," 2025 IEEE 9th International Conference on Software Engineering & Computer Systems (ICSECS), Pekan, Pahang, Malaysia, 2025, pp. 18-23, doi: 10.1109/ICSECS65227.2025.11279248. keywords: {YOLO;Training;Adaptation models;Sensitivity;Facial expressions;Face recognition;Real-time systems;Robustness;Noise measurement;Synthetic data;facial expression recognition;YOLO;computer vision;object detection; FER2013;KDEF;mAP},
+1. Ali Hassan, "YOLOv11 Face Emotion Detection," 2025, GitHub repository. [Online]. Available: https://github.com/alihassanml/Yolo11-Face-Emotion-Detection
+2. Aklima Akter Rimi, "9 Facial Expressions for YOLO," 2025, Kaggle dataset. [Online]. Available: https://www.kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo
+3. U. Aymon, N. S. Kamarudin and A. F. A. Nasir, "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study," 2025 IEEE 9th International Conference on Software Engineering & Computer Systems (ICSECS), Pekan, Pahang, Malaysia, 2025, pp. 18-23.

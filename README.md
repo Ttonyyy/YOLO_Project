@@ -13,7 +13,7 @@ The [YOLO_Expressions](YOLO_Expressions.ipynb) Colab notebook contains all of th
 
 The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. My version is a modification of the one found in another github repo [1]. It records fps and latency calculations that will be discussed later in my results section. I ran this Python code locally on my machine to capture real-time data using my webcam so you may need to make some modifications to file paths for where the weights "best.pt" exist. Or you could just put the weights in the same directory as the [real_time_tracking](real_time_tracking.py) file.
 
-The final model weights are available in the path:
+My model's final weights are available in the following path:
 
 [yolo_runs/yolo11n_run_final/weights](yolo_runs/yolo11n_run_final/weights)
 

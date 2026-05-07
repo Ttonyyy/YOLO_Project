@@ -7,16 +7,17 @@ I trained YOLO models on a substantial dataset (~70k images) of facial expressio
 I chose this project because YOLO is something that I enjoyed working with in my undergraduate classes (Senior Design I & II). However, at that time I was only able to work with a very small dataset that was difficult to optimize because of the limited amount of data I could use to train the YOLO model. I had the idea for this project when I was looking for YOLO datasets in Kaggle and came across a dataset with tens of thousands of facial expressions [2]. My motivation for this dataset came about while I was playing a game because whenever I lost I would be sad for a couple of seconds. I wondered if YOLO could tell when this happens without any additional information about what I was doing. Some of what I've been doing in Digital Image Processing is trying to recognize patterns in images and I was wondering if I could get my YOLO algorithm to do the same for facial expressions. I wanted my YOLO model to do this as well as a human can because people are able to tell the expressions on another person’s face pretty well. I can tell when the people around me are happy, sad, or angry.
 
 # Code
-All of the code necessary to redo this project on your own is provided in this repo. Parts of this project were done in Google Colab so purchasing Colab Pro may be necessary because I ran into runtime disconnections more frequently using their free tier.
+All of the code necessary to redo this project on your own is provided in this repo. Parts of this project were done in Google Colab so purchasing Colab Pro may be necessary because I ran into some runtime disconnections during my sessions more frequently using their free tier. It also gives you access to higher-tier GPUs that should complete the runtime faster.
 
-The Google Colab Notebook "" contains all of the Python code necessary to train the YOLO model ...
+The [YOLO_Expressions](YOLO_Expressions.ipynb) Colab notebook contains all of the Python code necessary to train and test the YOLO model on my training and test datasets.
 
-The Python file "" was used to test my final model's real-time performance ...
+The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. It also records fps and latency calculations that will be discussed later in my results section. I ran this Python code locally on my machine to capture real-time data using my webcam.
+
+# Dataset Requirements
+
 
 # Flowchart
 Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)
-
-# Dataset Requirements
 
 # Competetive Results
 There was a recent IEEE paper "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study" from 2025 that reported good performance metrics I will use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because I ended up using YOLOv11n as well for my final model. It just makes it easier to compare results using the same model.

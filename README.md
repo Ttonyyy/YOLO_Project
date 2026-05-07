@@ -6,9 +6,15 @@ I trained YOLO models on a substantial dataset (~70k images) of facial expressio
 # Motivation
 I chose this project because YOLO is something that I enjoyed working with in my undergraduate classes (Senior Design I & II). However, at that time I was only able to work with a very small dataset that was difficult to optimize because of the limited amount of data I could use to train the YOLO model. I had the idea for this project when I was looking for YOLO datasets in Kaggle and came across a dataset with tens of thousands of facial expressions [2]. My motivation for this dataset came about while I was playing a game because whenever I lost I would be sad for a couple of seconds. I wondered if YOLO could tell when this happens without any additional information about what I was doing. Some of what I've been doing in Digital Image Processing is trying to recognize patterns in images and I was wondering if I could get my YOLO algorithm to do the same for facial expressions. I wanted my YOLO model to do this as well as a human can because people are able to tell the expressions on another person’s face pretty well. I can tell when the people around me are happy, sad, or angry.
 
-# Flowchart
-
 # Code
+All of the code necessary to redo this project on your own is provided in this repo. Parts of this project were done in Google Colab so purchasing Colab Pro may be necessary because I ran into runtime disconnections more frequently using their free tier.
+
+The Google Colab Notebook "" contains all of the Python code necessary to train the YOLO model ...
+
+The Python file "" was used to test my final model's real-time performance ...
+
+# Flowchart
+Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)
 
 # Dataset Requirements
 

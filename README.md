@@ -18,7 +18,7 @@ The final model weights are available in the path:
 [yolo_runs/yolo11n_run_final/weights](yolo_runs/yolo11n_run_final/weights)
 
 # Dataset & Requirements
-<img align="right" width="196" height="400" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53">
+<img align="right" width="221" height="450" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53">
 
 The dataset I use for this project is titled “9 Facial Expressions for YOLO,” [2]. I discovered the dataset searching through Kaggle for YOLO datasets. Using this pre-made YOLO dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. The dataset pre-organizes the folder structure as well so it's ready to be used after downloading it.
 
@@ -35,7 +35,12 @@ Valid | 1720 | 2.52%
 Test | 1700 | 2.49%
 Total | 68284 | 100%
 
-There is an overwhelming number of images for training but that’s how it should be for such a large dataset. Most of the learning that the YOLO model does is during the training phase so obviously that’s where most of the images will go.
+There is an overwhelming number of images for training but that’s how it should be for such a large dataset. Most of the learning that the YOLO model does is during the training phase so obviously that’s where most of the images will go. A small amount is used for validation just so the model can test its prediction ability on separate unseen images and evaluate its performance so it can tune hyperparameters and prevent overfitting. The training and validation images are unique meaning images do not appear in each other’s datasets. The test set has 1700 images (2.49% of the total). This amount is good enough for the testing because it is large enough
+to show and measure the performance of my model. There’s no point in having a larger slice of the dataset because it’s not even learning at this point. The images in the test set are also unique in that none of the images that appear in the test dataset show up in the training or validation datasets. Thus, it is a fair test, and the performance results are not skewed due to repeat images.
+
+The entire dataset was collected from multiple open-source facial expression datasets hosted on Roboflow. According to the author of the dataset, duplicates and corrupted files were removed during preprocessing. Images included in the datasets are sourced from real-world images, synthetic data, or annotated frames from videos. The creator of this dataset also warns that although the dataset is diverse there are some class imbalances. Expressions like contempt or sleepy appear less frequently in the dataset than common expressions such as happy or sad. This imbalance is inevitable because we see some emotions more often than others in real life. There will be some performance hits between the different classes due to this fact. I expect the common expressions to perform better.
+
+<img width="1780" height="446" alt="image" src="https://github.com/user-attachments/assets/8d9e9b82-413f-432f-b242-934f436ccce2" />
 
 # Work Flow
 Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)

@@ -48,7 +48,7 @@ The training was done in the [YOLO_Expressions](YOLO_Expressions.ipynb) notebook
 
 When evaluating results for all the models I trained I was looking at the performance of the confusion matrices, recall curve, precision curve, and f1 score curves. They all performed relatively similarly but I ended up using YOLO v11 because it is preferable over YOLO v8 in real-time tracking. 
 
-During real-time tracking I went away from running it in Colab because accessing my webcam is easier if I run the Python code locally on my machine. I used OpenCV to access my webcam and Ultralytics to run my final model. I used a confidence of 0.4 for my model because I got the results for all of my classes in that range. The only class that could get a confidence score consistently above 0.6 was 'happy'.
+During real-time tracking I went away from running it in Colab because accessing my webcam is easier if I run [real_time_tracking](real_time_tracking.py) locally on my machine. I used OpenCV to access my webcam and Ultralytics to run my final model. I used a confidence of 0.4 for my model because I got the results for all of my classes in that range. The only class that could get a confidence score consistently above 0.6 was 'happy'.
 
 # Competetive Results
 There was a recent IEEE paper ["Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study"](https://ieeexplore.ieee.org/abstract/document/11279248) from 2025 that reported good performance metrics I use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because my final model ended up using YOLOv11n as well. It just makes it easier to compare results using the same model.

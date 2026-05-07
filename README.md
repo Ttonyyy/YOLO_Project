@@ -13,6 +13,22 @@ I chose this project because YOLO is something that I enjoyed working with in my
 # Dataset Requirements
 
 # Competetive Results
+There was a recent IEEE paper "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study" from 2025 that reported good performance metrics I will use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because I ended up using YOLOv11n as well for my final model. It just makes it easier to compare results using the same model.
+
+One of the easiest metrics they report about are their confusion matrices provided below. All you want in a confusion matrix is the prediction labels aligning with the true label. A perfect confusion matrix would have all values on the main diagonal squares in that case. They have relatively good results in the top confusion matrix. The dark colors in the diagonals show a good amount of correct predictions for their classes. However, there is a reason why the top matrix performs so well that could be a detriment for actual implementation (Hint: Limited KDEF dataset). On the other hand, the bottom matrix does not perform as well. It has a good number of incorrect predictions for both false positives and false negatives.
+
+<p align="center">
+  <img width="808" height="385" alt="image" src="https://github.com/user-attachments/assets/edb79f17-db35-4ebf-998b-19363c990e1e" />
+</p>
+
+The table down below provides their reported performance metrics such as Precision, Recall, and Mean Average Precision for just YOLOv11n. Again, the models that train on the KDEF dataset perform well but there's an issue with taking those results at face value. The performance for the dataset FER2013 does worse than KDEF. 
+
+Model | Dataset | Precision% | Recall% | mAP@0.5%
+--- | --- | --- | --- |---
+YOLOv11n | FER2013 | 65.2 | 60.5 | 60.8
+YOLOv11n | KDEF | 87.7 | 91.1 | 94.5
+
+Their paper shows very strong results for the dataset KDEF but there are limitations with this dataset. Firstly, it is not as well-suited for real-life use because it has a small number of samples (4900) and has a limited variation in poses and lighting. Thus, it will encounter a lot more problems trying to detect facial expressions from more diverse settings and environments. Secondly, the paper does not include any results for real-time implemention of their tracking model so we don't have any accuracy or latency performance to grade their models.
 
 # My Results
 

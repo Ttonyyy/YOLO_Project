@@ -16,6 +16,7 @@ The [real_time_tracking](real_time_tracking.py) file is used to test the final m
 # Dataset & Requirements
 <img align="right" width="196" height="400" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53" />
 The dataset I use for this project is titled “9 Facial Expressions for YOLO,” and is specifically the latest 4th version in Kaggle. I discovered the dataset by searching through Kaggle specifically looking for YOLO datasets. Ultralytics YOLO requires images accompanied by a text file with the same name that contain bounding box coordinates along with the class of emotion that the image is. Using this pre-made dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. 
+<br><br><br><br><br><br><br><br><br><br><br>
 
 # Work Flow
 Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)

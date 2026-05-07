@@ -18,9 +18,24 @@ The final model weights are available in the path:
 [yolo_runs/yolo11n_run_final/weights](yolo_runs/yolo11n_run_final/weights)
 
 # Dataset & Requirements
-<img align="right" width="196" height="400" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53" />
-The dataset I use for this project is titled “9 Facial Expressions for YOLO,” and is specifically the latest 4th version in Kaggle. I discovered the dataset by searching through Kaggle specifically looking for YOLO datasets. Ultralytics YOLO requires images accompanied by a text file with the same name that contain bounding box coordinates along with the class of emotion that the image is. Using this pre-made dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. 
-<br><br><br><br><br><br><br><br><br><br><br>
+<img align="right" width="196" height="400" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53">
+
+The dataset I use for this project is titled “9 Facial Expressions for YOLO,” [2]. I discovered the dataset searching through Kaggle for YOLO datasets. Using this pre-made YOLO dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. The dataset pre-organizes the folder structure as well so it's ready to be used after downloading it.
+
+The dataset itself has images with facial expressions in a wide range of classes. The nine classes are as follows: angry, contempt, disgust, fear, happy, natural, sad, sleepy, and surprised. Images of each class are provided on the right. This dataset is perfect for this project because it contains a wide spread of emotions that can be seen on people’s faces. As such they are very well-suited for training machine learning algorithms.
+
+The images in the dataset are formatted as JPGs and the size/resolution of the images vary. However, this doesn’t matter because YOLO handles the resizing itself automatically during the training process. It resizes images of varying resolutions to a standard size. Thus, anyone who uses this dataset does not have to worry about doing it themselves. 
+
+There are 68,284 images in total split amongst the 3 different datasets (train, valid, test).
+
+Dataset Split | Images (#) | Images (%)
+--- | --- | --- 
+Train | 64864 | 94.99%
+Valid | 1720 | 2.52%
+Test | 1700 | 2.49%
+Total | 68284 | 100%
+
+There is an overwhelming number of images for training but that’s how it should be for such a large dataset. Most of the learning that the YOLO model does is during the training phase so obviously that’s where most of the images will go.
 
 # Work Flow
 Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)

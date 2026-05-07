@@ -11,12 +11,13 @@ All of the code necessary to redo this project on your own is provided in this r
 
 The [YOLO_Expressions](YOLO_Expressions.ipynb) Colab notebook contains all of the Python code necessary to train and test the YOLO model on my training and test datasets.
 
-The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. It also records fps and latency calculations that will be discussed later in my results section. I ran this Python code locally on my machine to capture real-time data using my webcam.
+The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. It also records fps and latency calculations that will be discussed later in my results section. I ran this Python code locally on my machine to capture real-time data using my webcam. My version is a modification of the one found in another github repo [1].
 
-# Dataset Requirements
+# Dataset & Requirements
+<img align="right" width="196" height="400" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53" />
+The dataset I use for this project is titled “9 Facial Expressions for YOLO,” and is specifically the latest 4th version in Kaggle. I discovered the dataset by searching through Kaggle specifically looking for YOLO datasets. Ultralytics YOLO requires images accompanied by a text file with the same name that contain bounding box coordinates along with the class of emotion that the image is. Using this pre-made dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. 
 
-
-# Flowchart
+# Work Flow
 Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)
 
 # Competetive Results
@@ -42,4 +43,4 @@ Their paper shows very strong results for the dataset KDEF but there are limitat
 # References
 1. Ali Hassan, "YOLOv11 Face Emotion Detection," 2025, GitHub repository. [Online]. Available: https://github.com/alihassanml/Yolo11-Face-Emotion-Detection
 2. Aklima Akter Rimi, "9 Facial Expressions for YOLO," 2025, Kaggle dataset. [Online]. Available: https://www.kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo
-3. U. Aymon, N. S. Kamarudin and A. F. A. Nasir, "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study," 2025 IEEE 9th International Conference on Software Engineering & Computer Systems (ICSECS), Pekan, Pahang, Malaysia, 2025, pp. 18-23.
+3. U. Aymon, N. S. Kamarudin and A. F. A. Nasir, "[Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study](https://ieeexplore.ieee.org/abstract/document/11279248)," 2025 IEEE 9th International Conference on Software Engineering & Computer Systems (ICSECS), Pekan, Pahang, Malaysia, 2025, pp. 18-23.

@@ -43,11 +43,11 @@ The entire dataset was collected from multiple open-source facial expression dat
 <img width="1780" height="446" alt="image" src="https://github.com/user-attachments/assets/8d9e9b82-413f-432f-b242-934f436ccce2" />
 
 # Work Flow
-I started this project training two differents YOLO nano models (v8 & v11) to see which one performed better. I chose the nano models for this project because they perform the best for real-time and also my dataset was not large enough to really justify bigger models. YOLO provides some pre-trained versions trained on the MS COCO dataset that I used because it transfers some of the knowledge gained from the over 330,000 images trained there. It has some foundation to begin with my smaller dataset. For example, the pre-training allows my model to already understand what a person is because that's one of the classes in the MS COCO dataset.
+I started this project training two differents YOLO nano models (v8 & v11) to see which one performed better. I chose the nano models for this project because they perform the best for real-time and also my dataset was not large enough to really justify bigger models. YOLO provides some pre-trained models on the MS COCO dataset that I started with because it transfers some of the knowledge gained from the over 330,000 images trained there. My model has some foundation to begin training on my much smaller dataset. For example, the pre-training allows my model to already understand what a person is because that's one of the classes in the MS COCO dataset.
 
 The training was done in the [YOLO_Expressions](YOLO_Expressions.ipynb) notebook. It contains the last run I did using my final model and parameters but some of the parameters I changed constantly during training were the number of epochs, image size, and batch size. I left mostly all the other parameters that could optimize the training like the optimizer or learning rate default because I'll admit that I don't have the understanding necessary to do better than what YOLO chooses automatically.
 
-Talk about work flow. What did i start with, models I evaluated and analyzed, metric evaluation for the best model (similar metrics but yolo11n better than yolov8n for real time)
+When evaluating results for all the models I trained I was looking at the performance of the confusion matrices, recall curve, precision curve, and f1 score curves. They all performed relatively similarely but I ended up using YOLO v11 because it is preferable over YOLO v8 in real-time tracking. 
 
 # Competetive Results
 There was a recent IEEE paper "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study" [3] from 2025 that reported good performance metrics I use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because my final model ended up using YOLOv11n as well. It just makes it easier to compare results using the same model.
@@ -68,7 +68,7 @@ YOLOv11n | KDEF | 87.7 | 91.1 | 94.5
 Their paper shows very strong results for the dataset KDEF but there are limitations with this dataset. It is not as well-suited for real-life use because it has a small dataset (4,900 samples) and has a very limited variation in poses and lighting. Thus, it performs well during testing on their test dataset but it will encounter a lot more problems trying to detect facial expressions from more diverse settings and environments. The dataset FER2013 performs poorly compared to KDEF because it just has a worse collection of data even if it has a much larger dataset (35,887 samples). A very important component missing from the paper is that it does not include any results for real-time implemention of their tracking model so we don't have any accuracy or latency performance to grade their models.
 
 # My Results
-
+All of my performance metric results for training and testing are provided in the path [yolo_runs/](yolo_runs/)
 
 # Future Work
 

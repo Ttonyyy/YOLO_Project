@@ -17,7 +17,7 @@ The final model weights are available in the path:
 
 [yolo_runs/yolo11n_run_final/weights](yolo_runs/yolo11n_run_final/weights)
 
-# Dataset & Requirements
+# Dataset
 <img align="right" width="221" height="450" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53">
 
 The dataset I use for this project is titled “9 Facial Expressions for YOLO,” [2]. I discovered the dataset searching through Kaggle for YOLO datasets. Using this pre-made YOLO dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. The dataset pre-organizes the folder structure as well so it's ready to be used after downloading it.

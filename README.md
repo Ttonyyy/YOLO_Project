@@ -46,7 +46,7 @@ I started this project training two differents YOLO nano models (v8 & v11) to se
 
 The training was done in the [YOLO_Expressions](YOLO_Expressions.ipynb) notebook. It contains the last run I did using my final parameters and model but some of the parameters I changed constantly during training were the number of epochs, image size, and batch size. I left mostly all the other parameters that could optimize the training like the optimizer or learning rate default because I'll admit that I don't have the understanding necessary to do better than what YOLO chooses automatically.
 
-When evaluating results for all the models I trained I was looking at the performance of the confusion matrices, recall curve, precision curve, and f1 score curves. They all performed relatively similarely but I ended up using YOLO v11 because it is preferable over YOLO v8 in real-time tracking. 
+When evaluating results for all the models I trained I was looking at the performance of the confusion matrices, recall curve, precision curve, and f1 score curves. They all performed relatively similarly but I ended up using YOLO v11 because it is preferable over YOLO v8 in real-time tracking. 
 
 # Competetive Results
 There was a recent IEEE paper "Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study" [3] from 2025 that reported good performance metrics I use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because my final model ended up using YOLOv11n as well. It just makes it easier to compare results using the same model.

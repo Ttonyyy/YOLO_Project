@@ -48,7 +48,7 @@ The training was done in the [YOLO_Expressions](YOLO_Expressions.ipynb) notebook
 
 When evaluating results for all the models I trained I was looking at the performance of the confusion matrices, recall curve, precision curve, and f1 score curves. They all performed relatively similarly but I ended up using YOLO v11 because it is preferable over YOLO v8 in real-time tracking. 
 
-During real-time tracking I decided not to run it in Colab because accessing my webcam is easier if I run [real_time_tracking](real_time_tracking.py) locally on my machine. I used OpenCV to access my webcam and Ultralytics to run my final YOLO model using the weights produced during training. I used a confidence of 0.4 for my model's detection because I got the best results for all of my classes in that range. The only class that could get a confidence score consistently above 0.6 was 'happy'.
+During real-time tracking I decided not to run it in Colab because accessing my webcam is easier if I run [real_time_tracking](real_time_tracking.py) locally on my machine. I used OpenCV to access my webcam and Ultralytics to run my final YOLO model using the weights produced during training. I used a confidence of 0.4 for my model's detection because I got the best results for most of my classes in that range. I tried different ranges of confidence but higher confidence would only really show 'happy' and lower confidence would confuse classes a lot more often.
 
 # Competitive Results
 There was a recent IEEE paper ["Facial Expression Recognition with YOLOv11 and YOLOv12: A Comparative Study"](https://ieeexplore.ieee.org/abstract/document/11279248) from 2025 that reported good performance metrics I use as a comparison for my results. They provide results for YOLOv11n and YOLOv12n on two different datasets (FER2013 & KDEF) but I will only discuss their results using YOLOv11n because my final model ended up using YOLOv11n as well. It just makes it easier to compare results using the same model. One thing to keep in mind is that my results will report on two more classes (contempt and sleepy) than the ones here.
@@ -82,13 +82,13 @@ Model | Dataset | Precision% | Recall% | mAP@0.5%
 --- | --- | --- | --- |---
 YOLOv11n | Kaggle Dataset | 81.7 | 80.9 | 88.9
 
-The real-time performance metrics I measured were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time object detection. The table down below provides my results for FPS and latency for video capture without the model and with the model active.
+The real-time performance metrics I measured were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time object detection. The table down below provides my FPS and latency results for video capture without the model and with the model active.
 Real-time Video | FPS | Latency
 --- | --- | ---
-No Model | 14-15 | 0 ns (reference)
-YOLOv11n | 14-15 | 7-9 ns
+No Model | 27-31 | 0 ns (reference)
+YOLOv11n | 27-31 | 6-9 ns
 
-The accuracy of the model's ability to capture facial expressions correctly suffers compared to my test dataset results. I have to express myself very clearly sometimes to get it to recognize some facial expressions. For example, I have to open my mouth and extend my eyebrows to get it to detect surprised. The model also has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples in the training than angry. Contempt and fear rarely show at all and if it does it happens for maybe a couple of frames. Sometimes it will just confuse a natural facial expression on my face with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and sad.
+The accuracy of the model's ability to capture facial expressions suffers compared to my test dataset results. I have to express myself very clearly to get it to recognize some facial expressions. For example, I have to open my mouth and point my lips downwards while closing my eyes to get it to detect sad. The model also has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples than angry in the training set. Contempt and fear rarely show at all and if it does it happens for maybe a couple of frames. Sometimes it will mistake every single facial expression I make with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and surprised. 
 
 # Future Work
 Make accuracy improvements for the real-time detection. This may mean more samples, balanced dataset, better parameters during training, fewer classes or a combination of these changes. 

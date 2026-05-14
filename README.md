@@ -69,7 +69,7 @@ YOLOv11n | KDEF | 87.7 | 91.1 | 94.5
 Their paper shows very strong results for the dataset KDEF but there are limitations with this dataset. It is not as well-suited for real-life use because it has a small dataset (4,900 samples) and has a very limited variation in poses and lighting. Thus, it performs well during testing on their test dataset but it will encounter a lot more problems trying to detect facial expressions from more diverse settings and environments. The dataset FER2013 performs poorly compared to KDEF because it just has a worse collection of data even if it has a much larger dataset (35,887 samples). A very important component missing from the paper is that it does not include any results for real-time implemention of their tracking model so we don't have any accuracy or latency performance to grade their models.
 
 # My Results
-All of my performance metric results for training and testing are provided in the path [yolo_runs/](yolo_runs/)
+I include multiple training and testing results in [yolo_runs](yolo_runs) but my best results are provided in [yolo_runs/yolo11n_test_final](yolo_runs/yolo11n_test_final).
 
 # Future Work
 

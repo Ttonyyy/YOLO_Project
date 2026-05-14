@@ -82,9 +82,18 @@ Model | Dataset | Precision% | Recall% | mAP@0.5%
 --- | --- | --- | --- |---
 YOLOv11n | Kaggle Dataset | 81.7 | 80.9 | 88.9
 
-My real-time performance metrics were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time detection.
+The real-time performance metrics I measured were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time object detection. The table down below provides my results for FPS and latency for video capture without the model and with the model active.
+Real-time Video | FPS | Latency
+--- | --- | ---
+No Model | 14-15 | 0 ns (reference)
+YOLOv11n | 14-15 | 7-9 ns
+
+The accuracy of the model's ability to capture facial expressions correctly suffers compared to my test dataset results. I have to express myself very clearly sometimes to get it to recognize some facial expressions. For example, I have to open my mouth and extend my eyebrows to get it to detect surprised. The model also has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples in the training than angry. Contempt and fear rarely show at all and if it does it happens for maybe a couple of frames. Sometimes it will just confuse a natural facial expression on my face with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and sad.
 
 # Future Work
+Make accuracy improvements for the real-time detection. This may mean more samples, balanced dataset, better parameters during training, fewer classes or a combination of these changes. 
+
+I did not have time to try a different non-YOLO model to compare performance to so that may be something I can try out. I would need to convert my YOLO dataset to a different format for whatever model I choose.
 
 # References
 1. Ali Hassan, "YOLOv11 Face Emotion Detection," 2025, GitHub repository. [Online]. Available: https://github.com/alihassanml/Yolo11-Face-Emotion-Detection

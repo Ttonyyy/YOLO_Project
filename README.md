@@ -76,6 +76,14 @@ The confusion matrix on the left reports the raw numbers while the confusion mat
   <img width="5322" height="2148" alt="output" src="https://github.com/user-attachments/assets/c42d7892-c3ea-4312-bc4f-314126b9c1e3" />
 </p>
 
+The table down below provides my reported performance metrics such as Precision, Recall, and Mean Average Precision for YOLOv11n. My model performs much better for my dataset than FER2013. Most of FER2013's results reported 60-65% for all three metrics while my results were 80%-88%. My model performs a little worse for my dataset than KDEF which was expected. Most of KDEF's results reported 87%-94%. 
+
+Model | Dataset | Precision% | Recall% | mAP@0.5%
+--- | --- | --- | --- |---
+YOLOv11n | Kaggle Dataset | 81.7 | 80.9 | 88.9
+
+My real-time performance metrics were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time detection.
+
 # Future Work
 
 # References

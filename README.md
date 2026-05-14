@@ -73,7 +73,7 @@ I include multiple training and testing results in [yolo_runs](yolo_runs) but th
 
 The confusion matrix on the left reports the raw numbers while the confusion matrix on the right reports the normalized values. I will only compare using the normalized values since the dataset I use has more samples than the datasets in the IEEE paper. My final model reports very good results. As you can see, most of the dark colors land on the main diagonal squares. As I expected, the best performing class ended up being "happy" because it shows up the most out of any other class in the dataset. My confusion matrix shows better results than the IEEE paper's YOLOv11 results on the FER2013 dataset. For example, disgust performs way better in my model using my dataset than on the FER2013 dataset. Even on the KDEF dataset, my confusion matrix has very comparable results on all similar classes which was very unexpected.
 <p align="center">
-  <img width="6000" height="2250" alt="output" src="https://github.com/user-attachments/assets/c3329234-c50e-44da-bab3-67d81bd1e8a7" />
+  <img width="5322" height="2148" alt="output" src="https://github.com/user-attachments/assets/c42d7892-c3ea-4312-bc4f-314126b9c1e3" />
 </p>
 
 # Future Work

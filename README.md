@@ -85,8 +85,8 @@ YOLOv11n | Kaggle Dataset | 81.7 | 80.9 | 88.9
 The real-time performance metrics I measured were FPS and latency. This is something that the IEEE paper did not include in any of their findings because they did not implement their model for real-time object detection. The table down below provides my FPS and latency results for video capture without the model and with the model active.
 Real-time Video | FPS | Latency
 --- | --- | ---
-No Model | 27-31 | 0 ns (reference)
-YOLOv11n | 27-31 | 6-9 ns
+No Model | 27-31 | 0 ms (reference)
+YOLOv11n | 27-31 | 6-9 ms
 
 The accuracy of the model's ability to capture facial expressions suffers compared to my test dataset results. I have to express myself very clearly to get it to recognize some facial expressions. For example, I have to open my mouth and point my lips downwards while closing my eyes to get it to detect sad. The model also has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples than angry in the training set. Contempt and fear rarely show at all and if it does it happens for maybe a couple of frames. Sometimes it will mistake every single facial expression I make with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and surprised. 
 

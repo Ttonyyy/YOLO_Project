@@ -76,7 +76,7 @@ The confusion matrix on the left reports the raw numbers while the confusion mat
   <img width="5322" height="2148" alt="output" src="https://github.com/user-attachments/assets/c42d7892-c3ea-4312-bc4f-314126b9c1e3" />
 </p>
 
-The table down below provides my reported performance metrics such as Precision, Recall, and Mean Average Precision for YOLOv11n. The data was collected in the output summary from the last code cell in [YOLO_Expressions](YOLO_Expressions.ipynb). My model performs much better for my dataset than FER2013. Most of FER2013's results reported 60-65% for all three metrics while my results were 80%-88%. My model performs a little worse for my dataset than KDEF which was expected. Most of KDEF's results reported 87%-94%. 
+The table down below provides my reported performance metrics such as Precision, Recall, and Mean Average Precision for YOLOv11n. The data was collected from the last code cell's output summary in the [YOLO_Expressions](YOLO_Expressions.ipynb) notebook. My model performs relatively well. Most of my results reported 80-88% for all three metrics. Most of FER2013's results reported 60-65% while KDEF's results reported 87-94% for all three metrics. My model performs much better than FER2013 and a little worse for KDEF which was expected. I was aiming for better scores than their FER2013 dataset results which I achieved.
 
 Model | Dataset | Precision% | Recall% | mAP@0.5%
 --- | --- | --- | --- |---

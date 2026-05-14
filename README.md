@@ -20,7 +20,7 @@ My model's final weights are available in the following path:
 # Dataset
 <img align="right" width="221" height="450" alt="canvas" src="https://github.com/user-attachments/assets/38bd98e0-0367-43a5-bce1-eba4e15cfe53">
 
-The dataset I use for this project is titled [“9 Facial Expressions for YOLO”](https://www.kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo). I discovered the dataset searching through Kaggle for YOLO datasets. Using this pre-made YOLO dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. The dataset pre-organizes the folder structure as well so it's ready to be used after downloading it.
+The dataset I use for this project is [“9 Facial Expressions for YOLO”](https://www.kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo). I discovered the dataset searching through Kaggle for YOLO datasets. Using this pre-made YOLO dataset eliminates the time-consuming step of collecting data, creating a labeling standard, and labeling the images myself. The dataset pre-organizes the folder structure as well so it's ready to be used after downloading it.
 
 The dataset itself has images with facial expressions in a wide range of classes. The nine classes are as follows: angry, contempt, disgust, fear, happy, natural, sad, sleepy, and surprised. Examples of each class are provided on the right. This dataset is perfect for this project because it contains a wide spread of emotions that can be seen on people’s faces. As such they are very well-suited for training machine learning algorithms.
 

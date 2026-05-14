@@ -11,7 +11,7 @@ All of the code necessary to run my project on your own is provided in this repo
 
 The [YOLO_Expressions](YOLO_Expressions.ipynb) Colab notebook contains all of the Python code necessary to train and test the YOLO model on my training and test datasets. You can follow the descriptions in the notebook to understand what each code cell does and if it needs something specifically from the user.
 
-The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. I modified the one found in this github [repo](https://github.com/alihassanml/Yolo11-Face-Emotion-Detection) for my use. FPS and latency are recorded in this file and will be discussed later in [My Results](#my-results). I ran this Python code locally on my machine to capture real-time data using my webcam so you may need to make some modifications to file paths for where the weights "best.pt" exist. Or you could just put the weights in the same directory as the [real_time_tracking](real_time_tracking.py) file.
+The [real_time_tracking](real_time_tracking.py) file is used to test the final model's real-time performance. I modified the one found in this github [repo](https://github.com/alihassanml/Yolo11-Face-Emotion-Detection) for my use. FPS and latency are recorded in this file and will be discussed later in [My Results](#my-results). I ran this Python code locally on my machine to capture real-time data using my webcam so you may need to make some modifications to file path for where the weights "best.pt" exist. Or you could just put the weights in the same directory as the [real_time_tracking](real_time_tracking.py) file.
 
 My model's final weights are available in the following path:
 

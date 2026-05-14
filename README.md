@@ -88,7 +88,10 @@ Real-time Video | FPS | Latency
 No Model | 27-31 | 0 ms (reference)
 YOLOv11n | 27-31 | 6-9 ms
 
-The accuracy of the model's ability to capture facial expressions suffers compared to my test dataset results. I have to express myself very clearly to get it to recognize some facial expressions. For example, I have to open my mouth and point my lips downwards while closing my eyes to get it to detect sad. The model also has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples than angry in the training set. Contempt and fear rarely show at all and if it does it happens for maybe a couple of frames. Sometimes it will mistake every single facial expression I make with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and surprised. 
+The accuracy of the model's ability to capture facial expressions suffers compared to my test dataset results. I have to express myself very clearly to get it to recognize some facial expressions. For example, I have to get close to the camera, open my mouth, point my lips downwards, and close my eyes to get it to detect sad. I could not get contempt and fear to detect at all. I tried all sorts of faces to try and get those two to show up but they wouldn't be detected. The model has a really tough time differentiating between angry and disgust. It really likes disgust even though it has a smaller number of samples than angry in the training set. The class sleepy doesn't have trouble being detected but sometimes it will mistake every single facial expression I make with sleepy. The best performing expressions that don't get confused all that often were happy, natural, and surprised. Here are some of the facial expressions I was able to detect along with an FPS and latency overlay.
+
+<img width="2560" height="960" alt="output3" src="https://github.com/user-attachments/assets/aac887c4-f412-47fb-876c-6b91171f3df3" />
+
 
 # Future Work
 Make accuracy improvements for the real-time detection. This may mean more samples, balanced dataset, better parameters during training, fewer classes or a combination of these changes. 

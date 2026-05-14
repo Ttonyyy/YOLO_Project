@@ -98,6 +98,8 @@ Make accuracy improvements for the real-time detection. This may mean more sampl
 
 I did not have time to try a different non-YOLO model to compare performance so that may be something I can try out. I would need to convert my YOLO dataset to a different format for whatever model I choose.
 
+Create my own facial expression dataset based off of my facial expressions. The model does not have any facial expressions from my face so maybe that’s why it was having more trouble recognizing them on my face. 
+
 # References
 1. Ali Hassan, "YOLOv11 Face Emotion Detection," 2025, GitHub repository. [Online]. Available: https://github.com/alihassanml/Yolo11-Face-Emotion-Detection
 2. Aklima Akter Rimi, "9 Facial Expressions for YOLO," 2025, Kaggle dataset. [Online]. Available: https://www.kaggle.com/datasets/aklimarimi/8-facial-expressions-for-yolo
